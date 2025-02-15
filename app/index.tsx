@@ -6,7 +6,7 @@ const app = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Journal!</Text>
-      <Text style={styles.text}>Why is this so far up?</Text>
+      <Text className='text-white'>Why is this so far up?</Text>
       {/*Button*/}
       <Link style={styles.link} href='/home' asChild>
         <Pressable style={styles.buttonStyle}>
@@ -55,7 +55,4 @@ const styles = StyleSheet.create({
   link: {
     marginHorizontal: 'auto'
   },
-  button: {
-
-  }
 })

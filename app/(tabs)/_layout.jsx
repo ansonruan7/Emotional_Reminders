@@ -1,6 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { Tabs, Redirect } from 'expo-router'
+import "../../global.css"
 
 // import FontAwesome6 from '@react-native-vector-icons/fontawesome6'
 // const home_icon = FontAwesome6.getImageSourceSync('solid', "house-chimney", 20, 'black').then(
