@@ -12,14 +12,14 @@ import home_icon from '../../assets/images/react-logo.png';
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return(
-    <View>
+    <View className='items-center justify-center gap-2'>
       <Image
         source={icon}
         resizeMode='contain'
         tintColor={color}
         className="w-6 h-6"
       />
-      <Text className={`${focused ? 'font-semibold' : 'font-regular'} text-xs text-white`}>
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs text-white`}>
         {name}
       </Text>
     </View>
@@ -31,7 +31,15 @@ const TabsLayout = () => {
     <>
       <Tabs
         screenOptions={{
-          //tabBarShowLabel: false
+          tabBarShowLabel: false,
+          tabBarActiveTintColor: "#FFA001",
+          tabBarInactiveTintColor: "CDCDE0",
+          tabBarStyle: {
+            backgroundColor: "#161622",
+            borderTopWidth: 1,
+            borderTopColor: "#232533",
+            height: 84
+          }
         }}
       >
         <Tabs.Screen
@@ -44,6 +52,36 @@ const TabsLayout = () => {
                 icon={home_icon}
                 color={color}
                 name='Home'
+                focused={focused}
+              />
+            )
+          }}
+        />
+        <Tabs.Screen
+          name='write'
+          options={{
+            title: 'Write',
+            headerShown: false,
+            tabBarIcon: ({color, focused}) => (
+              <TabIcon
+                icon={home_icon}
+                color={color}
+                name='Write'
+                focused={focused}
+              />
+            )
+          }}
+        />
+        <Tabs.Screen
+          name='profile'
+          options={{
+            title: 'Profile',
+            headerShown: false,
+            tabBarIcon: ({color, focused}) => (
+              <TabIcon
+                icon={home_icon}
+                color={color}
+                name='Profile'
                 focused={focused}
               />
             )

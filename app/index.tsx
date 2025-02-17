@@ -1,58 +1,27 @@
-import { View, Text, StyleSheet, ImageBackground, TextInput, Pressable } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, TextInput, Pressable, ScrollView } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import React from 'react'
 import { Link } from 'expo-router'
 
+import CustomButton from '../components/CustomButton'
+
 const app = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Journal!</Text>
-      <Text className='text-white'>Why is this so far up?</Text>
-      {/*Button*/}
-      <Link style={styles.link} href='/home' asChild>
-        <Pressable style={styles.buttonStyle}>
-          <Text style={styles.buttonText}>Home</Text>
-        </Pressable>
-      </Link>
-    </View>
+    <SafeAreaView className='bg-primary'>
+      <ScrollView className="h-[100%]">
+        <View className='h-full px-4 items-center justify-center'>
+          <Text className='text-white text-6xl'>Hello</Text>
+          <CustomButton
+            title = "Continue With Email"
+            handlePress = {() => {}}
+            containerStyles={{}}
+            textStyles={{}}
+            isLoading={false}
+          />
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
 export default app
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    textAlign: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgb(113, 110, 104)',
-  },
-  text: {
-    color: 'white',
-    fontSize: 42,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  title: {
-    color: 'white',
-    fontSize: 42,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  buttonStyle: {
-    height: 60,
-    borderRadius: 20,
-    backgroundColor: 'rgba(0,0,0,0.75)',
-    padding: 6
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    padding: 4
-  },
-  link: {
-    marginHorizontal: 'auto'
-  },
-})
