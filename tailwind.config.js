@@ -7,6 +7,7 @@ module.exports = {
     extend: {},
     colors: {
       primary: "rgba(70, 96, 68, 0.88)",
+      secondary: "rgba(93, 127, 91, 0.8)",
       buttons: "rgba(90, 120, 70, 0.88)"
     }
   },
