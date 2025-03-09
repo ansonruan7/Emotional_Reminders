@@ -9,15 +9,16 @@ import "../../global.css"
 // );
 
 import home_icon from '../../assets/images/react-logo.png';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return(
-    <View className='items-center justify-center gap-2'>
+    <View className='items-center justify-center'>
       <Image
         source={icon}
         resizeMode='contain'
         tintColor={color}
-        style={{ width: 30, height: 30 }}
+        style={{ width: 30, height: 30}}
       />
       <Text className={`${focused ? 'font-semibold' : 'font-regular'} text-xs text-[#FFFFFF]`}>
         {name}
@@ -28,7 +29,7 @@ const TabIcon = ({ icon, color, name, focused }) => {
 
 const TabsLayout = () => {
   return (
-    <>
+    <SafeAreaProvider style={{flex: 1}}>
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
@@ -36,7 +37,7 @@ const TabsLayout = () => {
           tabBarInactiveTintColor: "CDCDE0",
           tabBarStyle: {
             backgroundColor: "#161622",
-            borderTopWidth: 1,
+            borderTopWidth: 2,
             borderTopColor: "#232533",
             height: 60
           }
@@ -88,7 +89,7 @@ const TabsLayout = () => {
           }}
         />
       </Tabs>
-    </>
+    </SafeAreaProvider>
   )
 }
 
