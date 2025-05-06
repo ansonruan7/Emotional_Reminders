@@ -2,10 +2,10 @@ import { View, Text, ScrollView, TouchableHighlight } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import { useCameraPermission, useMicrophonePermission } from "react-native-vision-camera"
+//import { useCameraPermission, useMicrophonePermission } from "react-native-vision-camera"
 
 const Create = () => {
-  const { hasPermission, requestPermission } = useCameraPermission();
+  //const { hasPermission, requestPermission } = useCameraPermission();
 
   return (
     <SafeAreaView className='bg-primary h-screen'>
